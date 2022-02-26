@@ -13,6 +13,7 @@ public class DeployAPI {
 	
 	@GetMapping("/deploy/api/user/find")
 	public Person findUser(@RequestParam(value="email") String email) {
+		System.out.println("-------------> Fetching the user " + email);
 		Person res = new Person();
 		res.setEmail(email);
 		res.setFirstname("Hassan");
